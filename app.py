@@ -56,15 +56,7 @@ if st.button("Predict the Best Crop"):
         
         # Check if the image exists and display it
         if os.path.exists(image_path):
-            st.markdown(
-                f"""
-                <div style="text-align: center;">
-                 <img src="{image_path}" alt="{crop}" width="400">
-                <p>{crop}</p>
-                </div>
-                """,
-                    unsafe_allow_html=True
-                    )
+            st.image(image_path,caption=crop,width=400)
 
 
         else:
